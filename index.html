@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aniruddha Singh - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e3f, #27293d);
+      color: #f0f0f0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+      perspective: 1000px;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      
+    }
+
+    h1, h2, h3, p {
+      user-select: none;
+    }
+
+    a.nav-link, a.nav-link:focus, a.nav-link:hover {
+      color: #0ff !important;
+    }
+
+  .navbar {
+      background: #0a0a1acc !important;
+      box-shadow: 0 6px 20px rgba(0,255,255,0.3);
+      backdrop-filter: saturate(200%) blur(15px);
+      border-bottom: 2px solid #00ffff;
+      z-index: 1030;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+  .navbar-brand {
+      margin-bottom: 0.75rem;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-shadow:
+        0 0 8px #00ffff,
+        0 0 15px #00ffff;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #00ffff;
+      text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+      text-align: center;
+    }
+
+    header p.lead {
+      font-weight: 300;
+      font-size: 1.25rem;
+      color: #a0a0a0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0ff;
+      text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff;
+      user-select: none;
+      text-align: center;
+    }
+
+    .card-3d {
+      background: #222240;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow:
+        0 10px 20px rgba(0,0,0,0.6),
+        0 6px 6px rgba(0,0,0,0.4);
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease;
+      margin-bottom: 3rem;
+      color: #ddd;
+    }
+
+    .skill-badge {
+      background: #111126;
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0ff;
+      box-shadow:
+        0 0 6px #00ffffaa;
+      user-select: none;
+      transition: transform 0.3s ease;
+      cursor: default;
+      margin: 0.3rem;
+      display: inline-block;
+    }
+
+    .skill-badge:hover {
+      transform: scale(1.1);
+      box-shadow:
+        0 0 15px #00ffffcc;
+    }
+
+    .project-card-3d {
+      background: #1a1a40;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow:
+        0 8px 15px rgba(0,0,0,0.7);
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease;
+      color: #ddd;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .project-card-3d h3 {
+      color: #0ff;
+      margin-bottom: 0.75rem;
+      user-select: text;
+    }
+
+    .project-card-3d p {
+      user-select: text;
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .project-card-3d a {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #0ff;
+      text-align: right;
+      user-select: none;
+    }
+    .project-card-3d a:hover {
+      color: #08f;
+    }
+
+    #contact label {
+      font-weight: 600;
+      color: #0ff;
+      user-select: none;
+    }
+
+    #contact .form-control:focus {
+      box-shadow: 0 0 10px #00ffffaa;
+      border-color: #00ffff;
+      background-color: #222240;
+      color: #eee;
+    }
+
+    #contact textarea.form-control {
+      resize: vertical;
+      background-color: #222240;
+      color: #eee;
+    }
+
+    #contact button.btn-primary {
+      background: #00ffff;
+      border: none;
+      border-radius: 15px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #222;
+      box-shadow:
+        0 0 15px #00ffffaa;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    #contact button.btn-primary:hover {
+      background: #00cccc;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #888;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .social-icons a {
+      color: #0ff;
+      margin: 0 10px;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+    .home{
+      padding-top: 30rem;
+    }
+
+    .social-icons a:hover {
+      color: #08f;
+    }
+
+    @media (max-width:700px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      #skills {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-info fw-bold" href="#home">Aniruddha Singh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5.3" id="home" style="padding-top:8rem;">
+    <header>
+      <h1>Aniruddha Singh <i class="bi bi-person-circle"></i></h1>
+      <p class="lead">BTech CSE Student</p>
+      <p>Welcome to my portfolio</p>
+    </header>
+
+  <div class="social-icons">
+    <a href="https://github.com/aniruddha" target="_blank" rel="noopener" aria-label="Github Profile"><i class="bi bi-github"></i></a>
+    <a href="https://linkedin.com/in/aniruddha" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+    <a href="https://twitter.com/aniruddha" target="_blank" rel="noopener" aria-label="Twitter Profile"><i class="bi bi-twitter"></i></a>
+    <a href="mailto:aniruddha@example.com" aria-label="Send email"><i class="bi bi-envelope-fill"></i></a>
+  </div>
+
+  <section id="about" class="card-3d" aria-label="About Me">
+    <h2 class="section-title"><i class="bi bi-info-circle"></i> About Me</h2>
+    <p>Hello! I am Aniruddha Singh, currently pursuing BTech in Computer Science Engineering. I am passionate about coding, learning new technologies, and building impactful projects. Always eager to grow and collaborate on exciting software development challenges.</p>
+  </section>
+
+  <section id="skills" class="card-3d" aria-label="Skills">
+    <h2 class="section-title"><i class="bi bi-code-slash"></i> Skills</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+      <span class="skill-badge">C++ <i class="bi bi-hammer"></i></span>
+      <span class="skill-badge">Java <i class="bi bi-cup-hot"></i></span>
+      <span class="skill-badge">Python <i class="bi bi-python"></i></span>
+      <span class="skill-badge">JavaScript <i class="bi bi-lightning-charge-fill"></i></span>
+      <span class="skill-badge">React <i class="bi bi-ui-checks-grid"></i></span>
+      <span class="skill-badge">Node.js <i class="bi bi-server"></i></span>
+      <span class="skill-badge">HTML &amp; CSS <i class="bi bi-code-square"></i></span>
+      <span class="skill-badge">SQL <i class="bi bi-database-fill"></i></span>
+      <span class="skill-badge">Git &amp; GitHub <i class="bi bi-git"></i></span>
+    </div>
+  </section>
+
+  <section id="projects" aria-label="Projects">
+    <h2 class="section-title"><i class="bi bi-folder2-open"></i> Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card-3d p-4" tabindex="0">
+          <h3>Portfolio Website <i class="bi bi-laptop"></i></h3>
+          <p>A personal website showcasing my work and skills with modern design and 3D effects.</p>
+          <a href="#" aria-label="Project Portfolio Website source link" class="stretched-link">View More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card-3d p-4" tabindex="0">
+          <h3>Personal Expense Tracker <i class="bi bi-wallet2"></i></h3>
+          <p>An app to manage and track personal expenses, budgets, and financial summaries with easy-to-use UI.</p>
+          <a href="expense.html" aria-label="Project Personal Expense Tracker source link" class="stretched-link">View More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card-3d p-4" tabindex="0">
+          <h3>Calculator <i class="bi bi-calculator"></i></h3>
+          <p>A web-based scientific calculator with a clean interface and functionality for common math operations.</p>
+          <a href="calculator.html" aria-label="Project Calculator source link" class="stretched-link">View More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card-3d p-4" tabindex="0">
+          <h3>To-Do List <i class="bi bi-list-check"></i></h3>
+          <p>A responsive to-do list app to organize tasks, set priorities, and track daily productivity effectively.</p>
+          <a href="list.html" aria-label="Project To-Do List source link" class="stretched-link">View More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="card-3d" aria-label="Contact Me">
+    <h2 class="section-title"><i class="bi bi-envelope-fill"></i> Contact Me</h2>
+    <form onsubmit="handleSubmit(event)" class="mx-auto" style="max-width: 500px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name <i class="bi bi-person-fill"></i></label>
+        <input type="text" class="form-control bg-dark text-light" id="name" name="name" placeholder="Your name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email <i class="bi bi-envelope"></i></label>
+        <input type="email" class="form-control bg-dark text-light" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message <i class="bi bi-chat-left-text-fill"></i></label>
+        <textarea id="message" class="form-control bg-dark text-light" name="message" placeholder="Your message here..." rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100" aria-label="Send message">Send <i class="bi bi-send-fill"></i></button>
+    </form>
+  </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Aniruddha Singh. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.card-3d, .project-card-3d');
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) translateZ(30px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
+      });
+    });
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      alert(`Thank you, ${form.name.value}! Your message has been received.`);
+      form.reset();
+    }
+  </script>
+</body>
+</html>
