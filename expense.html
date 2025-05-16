@@ -98,7 +98,16 @@
       animation: slideUp 1s ease forwards;
       opacity: 0;
     }
-  
+    @media (max-width: 700px) {
+      .image-sections {
+        flex-direction: column !important;
+        gap: 1rem !important;
+      }
+      .image-placeholder {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+      }
+    }
   </style>
 </head>
 <body>
