@@ -46,18 +46,15 @@
     }
     .image-placeholder {
       flex: 1;
-      height: 200px;
-      background: #222240;
-      border: 2px dashed #0ff;
+      object-fit: cover;
+      height: auto;
+      max-height: 200px;
+      width: 100%;
       border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0ff;
-      font-size: 1.2rem;
+      border: 2px dashed #0ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
       cursor: default;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .image-placeholder:hover, .image-placeholder:focus {
       transform: scale(1.05);
@@ -86,6 +83,9 @@
     .animate-slide-up {
       animation: slideUp 1s ease forwards;
       opacity: 0;
+    }
+    main.container {
+      padding-top: 7rem !important;
     }
     @media (max-width: 700px) {
       .image-sections {
