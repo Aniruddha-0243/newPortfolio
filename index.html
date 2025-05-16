@@ -222,13 +222,14 @@
       color: #08f;
     }
 
-    @media (max-width:700px) {
-      header h1 {
-        font-size: 2.2rem;
+    @media (max-width: 700px) {
+      .image-sections {
+        flex-direction: column !important;
+        gap: 1rem !important;
       }
-
-      #skills {
-        justify-content: flex-start;
+      .image-placeholder {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
       }
     }
   </style>
