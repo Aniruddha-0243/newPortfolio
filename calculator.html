@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calculator - Project Showcase</title>
+  <meta name="description" content="A web-based scientific calculator project with features including basic and scientific calculations, responsive interface, keyboard support, and calculation history." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
@@ -100,7 +101,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand text-info fw-bold" href="index.html">Aniruddha Singh</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
@@ -124,7 +125,7 @@
     </div>
   </nav>
   <main class="container" style="padding-top: 6rem;">
-    <h1 class="animate-fade-in">Calculator <i class="bi bi-calculator"></i></h1>
+    <h1 class="animate-fade-in">Calculator <i class="bi bi-calculator" aria-hidden="true"></i></h1>
     <p class="animate-fade-in" style="animation-delay: 0.3s;">
       A web-based scientific calculator with a clean interface and functionality for common math operations.
     </p>
@@ -136,12 +137,35 @@
       <li>History of calculations</li>
       <li>Clear and reset functionality</li>
     </ul>
-    <div class="image-sections animate-slide-up" style="animation-delay: 1.2s;">
-      <img src="image/WhatsApp Image 2025-05-16 at 21.39.02_c78e1f2f.jpg" alt="Calculator Screenshot 1" class="image-placeholder" tabindex="0" />
-      <img src="image/WhatsApp Image 2025-05-16 at 21.39.02_d9b01c19.jpg" alt="Calculator Screenshot 2" class="image-placeholder" tabindex="0" />
-      <img src="image/WhatsApp Image 2025-05-16 at 21.39.03_f242bcf0.jpg" alt="Calculator Screenshot 3" class="image-placeholder" tabindex="0" />
+    <h2 class="animate-fade-in" style="animation-delay: 1.2s;">Technologies Used</h2>
+    <ul class="animate-fade-in" style="animation-delay: 1.5s;">
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Bootstrap 5 for responsive design</li>
+      <li>Bootstrap Icons for UI elements</li>
+    </ul>
+    <h2 class="animate-fade-in" style="animation-delay: 1.8s;">Challenges Faced</h2>
+    <p class="animate-fade-in" style="animation-delay: 2.1s;">
+      Ensuring accurate scientific calculations and handling edge cases in user input were challenging. Implementing keyboard support required careful event handling to avoid conflicts.
+    </p>
+    <h2 class="animate-fade-in" style="animation-delay: 2.4s;">Future Improvements</h2>
+    <p class="animate-fade-in" style="animation-delay: 2.7s;">
+      Adding more advanced mathematical functions, improving the UI with themes, and integrating a history export feature are planned for future updates.
+    </p>
+    <div class="image-sections animate-slide-up" style="animation-delay: 3s;">
+      <figure>
+        <img src="image/WhatsApp Image 2025-05-16 at 21.39.02_c78e1f2f.jpg" alt="Calculator Screenshot 1" class="image-placeholder" tabindex="0" />
+        <figcaption class="text-center text-info">Calculator Interface - Basic Mode</figcaption>
+      </figure>
+      <figure>
+        <img src="image/WhatsApp Image 2025-05-16 at 21.39.02_d9b01c19.jpg" alt="Calculator Screenshot 2" class="image-placeholder" tabindex="0" />
+        <figcaption class="text-center text-info">Calculator Interface - Scientific Mode</figcaption>
+      </figure>
+      <figure>
+        <img src="image/WhatsApp Image 2025-05-16 at 21.39.03_f242bcf0.jpg" alt="Calculator Screenshot 3" class="image-placeholder" tabindex="0" />
+        <figcaption class="text-center text-info">Calculation History View</figcaption>
+      </figure>
     </div>
-    <p class="mt-4 animate-fade-in" style="animation-delay: 1.5s;">
+    <p class="mt-4 animate-fade-in" style="animation-delay: 3.3s;">
       <a href="index.html" aria-label="Back to portfolio homepage">&larr; Back to Portfolio</a>
     </p>
   </main>
