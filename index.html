@@ -402,13 +402,19 @@
       const toggler = document.querySelector('.navbar-toggler');
       const collapse = document.querySelector('#navbarContent');
 
-      if (toggler && collapse) {
-        toggler.addEventListener('click', function () {
-          collapse.classList.toggle('show');
-          const expanded = toggler.getAttribute('aria-expanded') === 'true';
-          toggler.setAttribute('aria-expanded', !expanded);
-        });
-      }
+    if (toggler && collapse) {
+      toggler.addEventListener('click', function () {
+        collapse.classList.toggle('show');
+        const expanded = toggler.getAttribute('aria-expanded') === 'true';
+        toggler.setAttribute('aria-expanded', !expanded);
+        // Prevent body scroll and layout shift when navbar is open
+        if (collapse.classList.contains('show')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+    }
     });
   </script>
 </body>
